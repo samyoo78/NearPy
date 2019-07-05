@@ -159,8 +159,8 @@ class Engine(object):
         # print 'Candidate count is %d' % len(candidates)
 
         # Apply fetch vector filters if specified and return filtered list
-        if fetch_vector_filters:
-            candidates = self._apply_filter(fetch_vector_filters,
+        if self.fetch_vector_filters:
+            candidates = self._apply_filter(self.fetch_vector_filters,
                                             candidates)
 
         # Apply distance implementation if specified
